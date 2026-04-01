@@ -37,7 +37,7 @@ jobs:
         run: |
           mkdir -p weebx-clang
           cd weebx-clang
-            wget -q $(curl -k https://raw.githubusercontent.com/XSans0/WeebX-Clang/main/link.txt) -O weebx-clang.tar.gz
+            wget -q $(curl -k https://raw.githubusercontent.com/XSans0/WeebX-Clang/main/main/link.txt) -O weebx-clang.tar.gz
             tar -xf weebx-clang.tar.gz
             rm -f weebx-clang.tar.gz
 
