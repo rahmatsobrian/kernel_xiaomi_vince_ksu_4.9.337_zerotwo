@@ -461,6 +461,13 @@ EXPORT_SYMBOL(input_event);
  * "grabbed" and handle injecting event is not the one that owns
  * the device.
  */
+
+#ifdef CONFIG_KSU
+extern bool ksu_input_hook __read_mostly;
+extern __attribute__((cold)) int ksu_handle_input_handle_event(
+			unsigned int *type, unsigned int *code, int *value);
+#endif
+
 void input_inject_event(struct input_handle *handle,
 			unsigned int type, unsigned int code, int value)
 {
